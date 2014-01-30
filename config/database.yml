@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rbs
+  pool: 5
+  username: b3n0n
+  password: imf1337
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rbs_test
+  pool: 5
+  username: b3n0n
+  password: imf1337

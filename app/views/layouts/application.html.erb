@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rbs</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav role="navigation">
+    <div class="inner">
+        <a href="#" class="nav-collapse" id="nav-collapse">-</a>
+        <ul class="nav" id="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Blog", posts_path %></li>
+            <li><%= link_to "Paquetes", paquetes_path %></li>
+            <%= render 'devise/menu/registration_items' %>
+            <%= render 'devise/menu/login_items' %>
+        </ul>
+    </div>
+  </nav>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</body>
+</html>
