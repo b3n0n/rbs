@@ -1,0 +1,38 @@
+<h1>Listing prestadors</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Servicios</th>
+      <th>Tarifas</th>
+      <th>Promociones</th>
+      <th>Puntos</th>
+      <th>Contactos</th>
+      <th>Websites</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prestadors.each do |prestador| %>
+      <tr>
+        <td><%= prestador.servicios %></td>
+        <td><%= prestador.tarifas %></td>
+        <td><%= prestador.promociones %></td>
+        <td><%= prestador.puntos %></td>
+        <td><%= prestador.contactos %></td>
+        <td><%= prestador.websites %></td>
+        <td><%= link_to 'Show', prestador %></td>
+        <td><%= link_to 'Edit', edit_prestador_path(prestador) %></td>
+        <td><%= link_to 'Destroy', prestador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Prestador', new_prestador_path %>

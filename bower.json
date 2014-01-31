@@ -1,0 +1,18 @@
+{
+  "name": "rbs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/b3n0n/rbs",
+  "authors": [
+    "Benito G <b3n0ns@gmail.com>"
+  ],
+  "description": "rbs",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "vendor",
+    "test",
+    "tmp"
+  ],
+  "dependencies": {
+  }
+}

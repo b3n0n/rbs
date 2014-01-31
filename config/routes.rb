@@ -1,7 +1,9 @@
 Rbs::Application.routes.draw do
+  resources :prestadors
+
   devise_for :users
   resources :paquetes
-
+  resources :prestadores
   resources :posts
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

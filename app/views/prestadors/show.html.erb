@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Servicios:</strong>
+  <%= @prestador.servicios %>
+</p>
+
+<p>
+  <strong>Tarifas:</strong>
+  <%= @prestador.tarifas %>
+</p>
+
+<p>
+  <strong>Promociones:</strong>
+  <%= @prestador.promociones %>
+</p>
+
+<p>
+  <strong>Puntos:</strong>
+  <%= @prestador.puntos %>
+</p>
+
+<p>
+  <strong>Contactos:</strong>
+  <%= @prestador.contactos %>
+</p>
+
+<p>
+  <strong>Websites:</strong>
+  <%= @prestador.websites %>
+</p>
+
+<%= link_to 'Edit', edit_prestador_path(@prestador) %> |
+<%= link_to 'Back', prestadors_path %>

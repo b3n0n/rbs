@@ -1,0 +1,41 @@
+<%= form_for(@prestador) do |f| %>
+  <% if @prestador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prestador.errors.count, "error") %> prohibited this prestador from being saved:</h2>
+
+      <ul>
+      <% @prestador.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :servicios %><br>
+    <%= f.text_area :servicios %>
+  </div>
+  <div class="field">
+    <%= f.label :tarifas %><br>
+    <%= f.text_field :tarifas %>
+  </div>
+  <div class="field">
+    <%= f.label :promociones %><br>
+    <%= f.text_area :promociones %>
+  </div>
+  <div class="field">
+    <%= f.label :puntos %><br>
+    <%= f.text_area :puntos %>
+  </div>
+  <div class="field">
+    <%= f.label :contactos %><br>
+    <%= f.text_area :contactos %>
+  </div>
+  <div class="field">
+    <%= f.label :websites %><br>
+    <%= f.text_area :websites %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

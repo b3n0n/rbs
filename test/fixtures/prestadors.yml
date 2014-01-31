@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  servicios: MyText
+  tarifas: 1.5
+  promociones: MyText
+  puntos: MyText
+  contactos: MyText
+  websites: MyText
+
+two:
+  servicios: MyText
+  tarifas: 1.5
+  promociones: MyText
+  puntos: MyText
+  contactos: MyText
+  websites: MyText

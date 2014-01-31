@@ -1,0 +1,2 @@
+class PrestadoresController < ApplicationController
+end

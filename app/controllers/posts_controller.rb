@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_filter :set_cache_buster
+  def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+  end    
   # GET /posts
   # GET /posts.json
   def index
@@ -14,11 +19,19 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    if  user_signed_in?
+        @post = Post.new  
+    else
+        redirect_to "/posts"
+    end
   end
 
   # GET /posts/1/edit
   def edit
+    if  user_signed_in? 
+    else
+        redirect_to "/posts"
+    end
   end
 
   # POST /posts

@@ -1,0 +1,7 @@
+<li><%= link_to "Blog", posts_path %></li>
+<% if user_signed_in? %>
+  <li><%= link_to "Paquetes", paquetes_path %></li>
+  <li><%= link_to "Prestadores", prestadors_path %></li>
+<% end %>
+<%= render 'devise/menu/registration_items' %>
+<%= render 'devise/menu/login_items' %>
