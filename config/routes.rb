@@ -3,11 +3,11 @@ Rbs::Application.routes.draw do
   resources :prestadors
   #get 'users/:id/posts' => 'Users#posts', :as => :user_posts
   #get '/' => "home#index"
-  resources :users do
-    member do
-      get :posts
-    end
-  end
+  #resources :users do
+  #  member do
+  #    get :posts
+  #  end
+  #end
   root :to => "home#index"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
