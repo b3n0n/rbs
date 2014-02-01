@@ -7,6 +7,9 @@ gem 'rails', '4.0.2'
 
 gem 'pg', "0.17.1"
 
+
+gem 'puma', '~> 2.3.2'
+
 gem "devise", "~> 3.2.2"
 
 # Use SCSS for stylesheets
