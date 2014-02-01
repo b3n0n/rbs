@@ -9,18 +9,19 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.where(user_id: current_user).to_a
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+   
   end
 
   # GET /posts/new
   def new
     if  user_signed_in?
-        @post = Post.new  
+        @post= Post.new
     else
         redirect_to "/posts"
     end
@@ -37,8 +38,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    #@post = current_user.posts.build(params[:post])
     @post = Post.new(post_params)
-
+    @post.user = current_user
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
